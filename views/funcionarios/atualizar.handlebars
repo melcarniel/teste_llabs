@@ -1,0 +1,35 @@
+<div class="card card-body">
+    <h3>Atualizar Funcionário</h3>
+    <form action="/funcionarios/todos/{{funcionario.id}}?_method=PUT" method="POST">
+    <input type="hidden" name="_method" value="PUT">
+    <div class="form-group">
+        <label for="Cargo">Cargo</label>
+        <input type="text" class="form-control" name="Cargo" value="{{funcionario.Cargo}}" required>
+    </div>
+    <div class="form-group">
+        <label for="cpf">CPF</label>
+        <input type="text" class="form-control" name="cpf" value="{{funcionario.cpf}}" required>
+    </div>
+    <div class="form-group">
+        <label for="Nome">Nome</label>
+        <input type="text" class="form-control" name="Nome" value="{{funcionario.Nome}}" required>
+    </div>
+    <div class="form-group">
+        <label for="Salario">Salário</label>
+        <input type="text" class="form-control" name="Salario" value="{{funcionario.Salario}}" required>
+    </div>
+    <div class="form-group">
+        <label for="UfNasc">UF Nascimento</label>
+        <input type="text" class="form-control" name="UfNasc" value="{{funcionario.UfNasc}}" required>
+    </div>
+    <div class="form-group">
+        <label for="Status">Status</label>
+        <select class="form-control" name="Status" value="{{funcionario.Status}}" required>
+        <option>ATIVO</option>
+        <option>BLOQUEADO</option>
+        <option>INATIVO</option>
+        </select>
+     </div>
+     <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </form>
+</div>
